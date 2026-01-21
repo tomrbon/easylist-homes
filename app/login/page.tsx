@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Home, Mail, Lock, Loader2, Eye, EyeOff } from "lucide-react";
+import Image from "next/image";
+import { Mail, Lock, Loader2, Eye, EyeOff } from "lucide-react";
 
 export default function LoginPage() {
     const [email, setEmail] = useState("");
@@ -43,9 +44,7 @@ export default function LoginPage() {
                 <div className="w-full max-w-md">
                     {/* Logo */}
                     <Link href="/" className="flex items-center gap-2 mb-8">
-                        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center">
-                            <Home className="w-5 h-5 text-white" />
-                        </div>
+                        <Image src="/logo.png" alt="EasyList.Homes" width={40} height={40} className="rounded-lg" />
                         <span className="text-xl font-bold text-gray-900 dark:text-white">
                             EasyList<span className="text-blue-600">.Homes</span>
                         </span>
@@ -144,7 +143,7 @@ export default function LoginPage() {
             <div className="hidden lg:flex flex-1 bg-gradient-to-br from-blue-600 to-blue-800 items-center justify-center p-12">
                 <div className="max-w-md text-center text-white">
                     <div className="w-20 h-20 rounded-2xl bg-white/10 backdrop-blur flex items-center justify-center mx-auto mb-8">
-                        <Home className="w-10 h-10" />
+                        <Image src="/logo.png" alt="EasyList.Homes" width={48} height={48} className="rounded-lg" />
                     </div>
                     <h2 className="text-3xl font-bold mb-4">
                         Professional Listings in Seconds

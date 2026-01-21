@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Home, ArrowLeft, Sparkles, Zap } from "lucide-react";
+import Image from "next/image";
+import { ArrowLeft, Sparkles, Zap } from "lucide-react";
 import PropertyForm from "@/components/generator/PropertyForm";
 import ListingOutputDisplay from "@/components/generator/ListingOutput";
 import { PropertyData, ListingOutput, GenerateListingResponse } from "@/types";
@@ -62,9 +63,7 @@ export default function GeneratorPage() {
                             </Link>
                             <div className="h-6 w-px bg-gray-300 dark:bg-gray-700" />
                             <Link href="/" className="flex items-center gap-2">
-                                <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center">
-                                    <Home className="w-4 h-4 text-white" />
-                                </div>
+                                <Image src="/logo.png" alt="EasyList.Homes" width={32} height={32} className="rounded-lg" />
                                 <span className="font-bold text-gray-900 dark:text-white">
                                     EasyList<span className="text-blue-600">.Homes</span>
                                 </span>

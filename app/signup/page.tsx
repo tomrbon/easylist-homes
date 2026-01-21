@@ -2,8 +2,9 @@
 
 import { Suspense, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useSearchParams } from "next/navigation";
-import { Home, Mail, Lock, User, Loader2, Eye, EyeOff, Check } from "lucide-react";
+import { Mail, Lock, User, Loader2, Eye, EyeOff, Check } from "lucide-react";
 
 function SignupForm() {
     const searchParams = useSearchParams();
@@ -52,9 +53,7 @@ function SignupForm() {
         <div className="w-full max-w-md">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 mb-8">
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center">
-                    <Home className="w-5 h-5 text-white" />
-                </div>
+                <Image src="/logo.png" alt="EasyList.Homes" width={40} height={40} className="rounded-lg" />
                 <span className="text-xl font-bold text-gray-900 dark:text-white">
                     EasyList<span className="text-blue-600">.Homes</span>
                 </span>
